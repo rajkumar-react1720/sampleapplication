@@ -1,4 +1,6 @@
 import React from 'react';
+import styled from 'styled-components';
+
 
 
 export default class ScrollButton extends React.Component {
@@ -23,10 +25,19 @@ export default class ScrollButton extends React.Component {
     }
 
     render () {
-        return <button title='Back to top' className='scroll' 
+
+      const Button = styled.button`
+        border: 1px solid #e0e0e0;
+        height: 50px;
+        width: 100px;
+        cursor: pointer;
+        float: right;
+        margin-bottom: 20px;
+      `;
+        return <Button
                  onClick={ () => { this.scrollToTop(); }}>
-                  <span className='arrow-up glyphicon glyphicon-chevron-up'></span>
-                </button>;
+                  <h3>Scroll Top</h3>
+                </Button>;
      }
   } 
 

@@ -5,6 +5,9 @@
   "dependencies": {
     "axios": "^0.19.0",
     "classnames": "^2.2.6",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "jest": "^24.8.0",
     "primeicons": "^2.0.0",
     "primereact": "^3.1.7",
     "react": "^16.6.3",
@@ -13,17 +16,19 @@
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
-    "react-transition-group": "^4.2.1",
+    "react-transition-group": "^4.2.2",
     "redux": "^4.0.4",
     "redux-logger": "^3.0.6",
+    "redux-promise": "^0.6.0",
     "redux-saga": "^1.0.5",
+    "redux-thunk": "^2.3.0",
     "styled-components": "^4.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test": "jest --watchAll"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -34,44 +39,6 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "jest": {
-    "testResultsProcessor": "jest-junit",
-    "verbose": true,
-    "testURL": "http://localhost/",
-    "setupTestFrameworkScriptFile": "./enzyme.setup.js",
-    "moduleFileExtensions": [
-      "js",
-      "jsx"
-    ],
-    "moduleNameMapper": {
-      "@/([^\\.]*)$": "<rootDir>/src/$1",
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/spec/shared/file_mock.js",
-      "@actions/(.*)$": "<rootDir>/src/actions/$1",
-      "@shared/(.*)$": "<rootDir>/src/shared/$1",
-      "@store/(.*)$": "<rootDir>/src/store/$1",
-      "@utils/(.*)$": "<rootDir>/src/utils/$1",
-      "@services/(.*)$": "<rootDir>/src/services/$1",
-      "@reducers/(.*)$": "<rootDir>/src/reducers/$1",
-      "@styles/(.*)$": "<rootDir>/src/styles/$1",
-      "@sagas/(.*)$": "<rootDir>/src/sagas/$1",
-      "@spec/(.*)$": "<rootDir>/spec/$1",
-      "@components/(.*)$": "<rootDir>/src/components/$1",
-      "@containers/(.*)$": "<rootDir>/src/controllers/$1",
-      "@tests/(.*)$": "<rootDir>/spec/$1",
-      "@src/(.*)$": "<rootDir>/src/$1",
-      "@images/(.*)$": "<rootDir>/src/utils/images/$1",
-      "\\.(css|less)$": "identity-obj-proxy"
-    },
-    "moduleDirectories": [
-      ".",
-      "src",
-      "src/utils",
-      "node_modules"
-    ],
-    "transform": {
-      ".*": "<rootDir>/node_modules/jest-css-modules"
-    }
-  },
   "directConnect": true,
   "nyc": {
     "sourceMap": false,

@@ -1,11 +1,26 @@
 import actions from "../shared/actionTypes";
-//import data from '../testJson';
-export const fetchUserDatils=()=>({
-    type: actions.FETCH_USER_DETAILS,
-}) 
+import apiURL from '../shared/constants';
+import axios from 'axios';
+
+
 
 // export const fetchUserDatils=()=>({
-//     data
+//     type: actions.FETCH_USER_DETAILS,          // SAGA ACTION
 // }) 
 
-export default fetchUserDatils;
+
+export function fetchUserDetails(){             // THUNK ACTION
+     return function(dispatch) {
+        axios.get(apiURL.fetchUserDetailsUri)
+        .then((response)=>dispatch({
+            type: actions.FETCH_USER_DETAILS_SUCCESS,
+            response: response
+        }))
+        .catch((err) => dispatch({
+            type: actions.FETCH_USER_DETAILS_FAILURE,
+            error: err
+        }))
+    }
+}
+
+export default fetchUserDetails;

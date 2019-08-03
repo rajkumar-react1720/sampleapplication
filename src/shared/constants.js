@@ -7,10 +7,11 @@ import red_hydrogen_black from '../resourse/images/red-hydrogen-black.png'
 import SamsungGalaxy_S10PLUS_Blue from '../resourse/images/SamsungGalaxy_S10PLUS_Blue.png';
 
 const constants = {
-    fetchUserDetailsUri: 'http://localhost:7000/getDetails',
-
+    //fetchUserDetailsUri: 'http://localhost:7000/getDetails',
+    fetchUserDetailsUri: 'https://api.github.com/search/users?q=8989',
     testResponse:[
         {
+            sku: '423424243432',
             imageUrl: iPhoneXr_Red,
             brand: 'Apple',
             price: '$41.66/mo',
@@ -20,6 +21,7 @@ const constants = {
 
         },
         {
+            sku: '736927374749',
             imageUrl:lg_v50_black,
             brand: 'LG',
             price: '$35.66/mo',
@@ -31,6 +33,7 @@ const constants = {
 
 
         {
+            sku: '987348348278',
             imageUrl: lg_black_alpha,
             brand: 'LG',
             price: '$41.66/mo',
@@ -39,6 +42,7 @@ const constants = {
             retailPrice: '$600.99'
         },
         {
+            sku: '987430924774',
             imageUrl: Motorola_Moto_G,
             brand: 'Motorola',
             price: '$41.66/mo',
@@ -47,6 +51,7 @@ const constants = {
             retailPrice: '$800.99'
         },
         {
+            sku: '656548733987',
             imageUrl: red_hydrogen_black,
             brand: 'RED',
             price: '$41.66/mo',
@@ -55,6 +60,7 @@ const constants = {
             retailPrice: ''
         },
         {
+            sku: '316464864846',
             imageUrl: SamsungGalaxy_S10PLUS_Blue,
             brand: 'Samsung',
             price: '$41.66/mo',

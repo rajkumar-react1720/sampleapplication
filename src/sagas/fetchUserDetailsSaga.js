@@ -6,6 +6,7 @@ import constant from '../shared/constants';
 export default function* fetchUserDetails (){
     try{
         const url = constant.fetchUserDetailsUri;
+        
         const response = yield call(callAxios, url, {}, 'GET');
         console.log('Hello', response)
         yield put({
