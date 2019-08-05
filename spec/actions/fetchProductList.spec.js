@@ -1,8 +1,7 @@
-
-import fetchProductList from '../../src/actions/fetchProductList';
 import actions from '../../src/shared/actionTypes';
+import fetchProductList from '../../src/actions/fetchProductList';
 
-fdescribe('fetchProductList action', () => {
+describe('fetchProductList action', () => {
   it('Should return FETCH_PRODUCT_LIST', () => {
     expect(fetchProductList({})).toEqual({
       type: actions.FETCH_PRODUCT_LIST

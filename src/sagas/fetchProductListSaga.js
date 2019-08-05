@@ -6,9 +6,8 @@ import constant from '../shared/constants';
 export default function* fetchProdcutListSaga (){
     debugger
     try{
-        const url = constant.fetchUserDetailsUri;
-        //const response = yield call(callAxios, url, {}, 'GET');
-        const response = constant.testResponse;
+        const url = constant.fetchProductList;
+        const response = yield call(callAxios, url, {}, 'GET');
         console.log('Hello products', response)
         yield put({
             type: actions.FETCH_PRODUCT_LIST_SUCCESS,

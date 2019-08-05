@@ -230,11 +230,11 @@ export class App extends React.Component {
   
   render() {
 
-    let slidButton = [0, 1, 2, 3];
-    const { products } = this.props;
+    // let slidButton = [0, 1, 2, 3];
+    // const { products } = this.props;
     return (
       <div>
-        <Wrapper >
+        {/* <Wrapper >
           <Title>Cutting Edge</Title>
           <NavSeparator />
           <AboutUs onClick={(e) => { this.navigateManager(e) }}>About Us</AboutUs>
@@ -282,7 +282,9 @@ export class App extends React.Component {
 
         <ScrollButton
           scrollStepInPx={50}
-          delayInMs={50} />
+          delayInMs={50} /> */}
+          <InputText id='inputtextStyle' label='Name'>
+          </InputText>
       </div>
     )
   }
@@ -290,7 +292,7 @@ export class App extends React.Component {
 
 export const mapStateToProps = state => ({
   userInfo: state.fetchUserDetailsReducer.data,
-  products: state.productListReducer.products
+  products: state.productListReducer.products.data
 });
 
 
