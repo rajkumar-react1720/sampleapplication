@@ -1,10 +1,3 @@
-import iPhoneXr_Red from '../resourse/images/iPhoneXr_Red_PureAngles.png';
-import lg_v50_black from '../resourse/images/lg-v50-thinq-5g-black.png';
-import Samsung_S10 from '../resourse/images/Samsung-S10-5G-Majestic-Black.png';
-import lg_black_alpha from '../resourse/images/Samsung-S10-5G-Majestic-Black.png';
-import Motorola_Moto_G from '../resourse/images/Motorola-Moto-G7-Power-Marine-Blue.png';
-import red_hydrogen_black from '../resourse/images/red-hydrogen-black.png'
-import SamsungGalaxy_S10PLUS_Blue from '../resourse/images/SamsungGalaxy_S10PLUS_Blue.png';
 
 const constants = {
     //fetchUserDetailsUri: 'http://localhost:7000/getDetails',

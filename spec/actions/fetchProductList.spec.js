@@ -1,5 +1,5 @@
 import actions from '../../src/shared/actionTypes';
-import fetchProductList from '../../src/actions/fetchProductList';
+import { fetchProductList } from '../../src/actions/fetchProductList';
 
 describe('fetchProductList action', () => {
   it('Should return FETCH_PRODUCT_LIST', () => {

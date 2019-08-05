@@ -9,7 +9,6 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "express": "^4.17.1",
-    "jest-junit": "^7.0.0",
     "primeicons": "^2.0.0",
     "primereact": "^3.1.7",
     "react": "^16.6.3",
@@ -22,8 +21,8 @@
     "redux": "^4.0.4",
     "redux-logger": "^3.0.6",
     "redux-promise": "^0.6.0",
-    "redux-saga": "^1.0.5",
-    "redux-saga-test-plan": "^4.0.0-beta.3",
+    "redux-saga": "^0.16.0",
+    "redux-saga-test-plan": "^3.7.0",
     "redux-thunk": "^2.3.0",
     "styled-components": "^4.3.2"
   },
@@ -49,8 +48,14 @@
     "instrument": false
   },
   "devDependencies": {
+    "@types/jest": "^24.0.16",
+    "@types/react": "^16.8.24",
+    "@types/react-dom": "^16.8.5",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^24.8.0",
-    "jest-css-modules": "^2.1.0"
+    "jest": "^23.6.0",
+    "jest-css-modules": "^2.1.0",
+    "jest-junit": "^7.0.0",
+    "jest-webpack-alias": "^3.3.3",
+    "react-test-renderer": "^16.8.6"
   }
 }

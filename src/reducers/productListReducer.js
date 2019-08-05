@@ -5,7 +5,7 @@ const defaultState = {
 }
 
 const productListReducer = (state = defaultState, action) => {
-    console.log('productListReducer response', action.response);
+    console.log('action function', action.response, 'action type', action.type);
     switch (action.type) {
         case actions.FETCH_PRODUCT_LIST_SUCCESS:
         return Object.assign({}, state, {

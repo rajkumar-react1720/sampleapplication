@@ -4,14 +4,13 @@ import actions from '../shared/actionTypes';
 import constant from '../shared/constants';
 
 export default function* fetchProdcutListSaga (){
-    debugger
     try{
         const url = constant.fetchProductList;
         const response = yield call(callAxios, url, {}, 'GET');
-        console.log('Hello products', response)
+        console.log('Hello products', response.data)
         yield put({
             type: actions.FETCH_PRODUCT_LIST_SUCCESS,
-            response: response
+            response: response.data
         });
     }
     catch(err){

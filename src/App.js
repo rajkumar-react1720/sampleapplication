@@ -9,10 +9,10 @@ import Login from './component/Login';
 import styled from 'styled-components';
 import { InputText } from 'primereact/inputtext';
 
-import bckimage from './resourse/images/5.jpg';
-import bckimage1 from './resourse/images/2.jpeg';
-import bckimage2 from './resourse/images/3.jpeg';
-import bckimage3 from './resourse/images/4.jpg';
+// import bckimage from './resourse/images/5.jpg';
+// import bckimage1 from './resourse/images/2.jpeg';
+// import bckimage2 from './resourse/images/3.jpeg';
+// import bckimage3 from './resourse/images/4.jpg';
 
 const Title = styled.h2`
 display: inline-block;
@@ -187,7 +187,7 @@ export class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      image: bckimage
+      //image: bckimage
     };
   }
 
@@ -204,7 +204,8 @@ export class App extends React.Component {
   }
 
   handleImageChange = (index) => {
-    let slidImages = [bckimage, bckimage1, bckimage2, bckimage3]
+   //let slidImages = [bckimage, bckimage1, bckimage2, bckimage3]
+   let slidImages = []
     for (let i = 0; i < slidImages.length; i++) {
       if (i === index) {
         this.setState({
@@ -292,7 +293,7 @@ export class App extends React.Component {
 
 export const mapStateToProps = state => ({
   userInfo: state.fetchUserDetailsReducer.data,
-  products: state.productListReducer.products.data
+  products: state.productListReducer.products
 });
 
 
