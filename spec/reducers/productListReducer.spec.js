@@ -4,6 +4,7 @@ import actions from '../../src/shared/actionTypes';
 
 
 describe('Fetch ProdcutList Reducer', () => {
+  let error = new Error('Error')
   it('should store ProdcutList  on FETCH_PRODUCT_LIST_SUCCESS', () => {
     expect(
       productListReducer(
@@ -31,6 +32,20 @@ describe('Fetch ProdcutList Reducer', () => {
           retailPrice: '$999.99'
         },
       ],
+    });
+  });
+
+  it('invoke when FETCH_PRODUCT_LIST_FAILURE', () => {
+    expect(
+      productListReducer(
+        {},
+        {
+          type: actions.FETCH_PRODUCT_LIST_FAILURE,
+          response: error,
+        },
+      ),
+    ).toEqual({
+      products: error
     });
   });
 });
