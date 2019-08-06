@@ -7,8 +7,7 @@ import ScrollButton from './component/ScrollUpComponent';
 import Login from './component/Login';
 
 import styled from 'styled-components';
-import { InputText } from 'primereact/inputtext';
-
+import InputTextComponent from './component/InputTextComponent';
 // import bckimage from './resourse/images/5.jpg';
 // import bckimage1 from './resourse/images/2.jpeg';
 // import bckimage2 from './resourse/images/3.jpeg';
@@ -284,8 +283,8 @@ export class App extends React.Component {
         <ScrollButton
           scrollStepInPx={50}
           delayInMs={50} /> */}
-          <InputText id='inputtextStyle' label='Name'>
-          </InputText>
+
+          <InputTextComponent/>
       </div>
     )
   }
