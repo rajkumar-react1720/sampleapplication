@@ -11,7 +11,7 @@ import axios from 'axios';
 
 export function fetchUserDetails(){             // THUNK ACTION
      return function(dispatch) {
-        axios.get(apiURL.fetchUserDetailsUri)
+        return axios.get(apiURL.fetchUserDetailsUri)
         .then((response)=>dispatch({
             type: actions.FETCH_USER_DETAILS_SUCCESS,
             response: response
