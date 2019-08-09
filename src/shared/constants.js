@@ -1,8 +1,48 @@
-
+export function formatPrice(price){
+    return price.toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'USD'
+    })
+}
 const constants = {
     //fetchUserDetailsUri: 'http://localhost:7000/getDetails',
     fetchUserDetailsUri: 'https://api.github.com/search/users?q=8989',
     fetchProductList: 'http://localhost:7000/getProductList',
+
+    foodData: [
+        {
+            name: 'Cheese Pizza',
+            img: '/img/cheese.jpg',
+            section: 'Pizza',
+            price: 1
+        },
+        {
+            name: 'Pepperoni Pizza',
+            img: '/img/pepperoni-pizza.jpg',
+            section: 'Pizza',
+            price: 1.5
+        },
+        {
+            name: 'Veggi Pizza',
+            img: '/img/veggi-pizza.jpg',
+            section: 'Pizza',
+            price: 1
+        },
+        {
+            name: 'Chicken Burger',
+            img: '/img/burger.jpg',
+            section: 'Sandwich',
+            price: 4
+        },
+        {
+            name: 'Fries',
+            img: '/img/fries.jpg',
+            section: 'Sides',
+            price: 2
+        },
+    ]
+
+
     // testResponse:[
     //     {
     //         sku: '423424243432',
@@ -65,4 +105,11 @@ const constants = {
     // ],
 }
 
+export const foods = constants.foodData.reduce((res, food) => {
+    if(!res[food.section]){
+       res[food.section] = [];
+    }
+    res[food.section].push(food);
+    return res;
+}, {})
 export default constants;
