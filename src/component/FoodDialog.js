@@ -89,7 +89,7 @@ export function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders }
         setOpenFood();
     }
 
-    if (!openFood) return null;
+    // if (!openFood) return null;
     const order = {
         ...openFood,
         quantity: quantity.value,

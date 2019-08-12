@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 //STYLES
-import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components'
 
 //COMPONENTS

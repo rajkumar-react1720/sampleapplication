@@ -1,13 +1,11 @@
 var express = require('express');
 const path = require('path');
 var app = express();
-var iPhoneXr_Red = require('./src/resourse/images/1')
-
 
 const response = [
     {
         sku: '423424243432',
-        imageUrl: `${iPhoneXr_Red}`,
+        //imageUrl: `${iPhoneXr_Red}`,
         brand: 'Apple',
         price: '$41.66/mo',
         model: 'iPhone® XR',
@@ -65,11 +63,9 @@ const response = [
     }
 ]
 
-const publicPath = path.resolve(__dirname, './src/resourse/images');
-app.use('/public', express.static(publicPath, { redirect: false }));
 
 app.get('/*', (req, res, next)=>{
-    res.header("Access-Control-Allow-Origin", "*");
+    //res.header("Access-Control-Allow-Origin", "*");
     res.json(response);
 });
 
