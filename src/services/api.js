@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 function callingAxios(endpoint, params, method, reqbody = {}) {
+  console.log('endpoint, params, method, reqbody', endpoint, params, method, reqbody)
     const axiosInstance = axios.create({
         headers:{
             'Content-Type': 'application/json',

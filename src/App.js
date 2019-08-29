@@ -2,25 +2,41 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+
 //ACTIONS
 import fetchProductList from './actions/fetchProductList';
 import fetchUserDetails from './actions/fetchUserDetails';
 
-
-
+import  Tabs, {Tab} from '@vz-soe-utils/tab';
+import  Bar from '@vz-soe-utils/bar';
 //COMPONENTS
 import { PizzaShoppieComponent } from './component/PizzaShoppieComponent';
 import InputTextComponent from './component/InputTextComponent';
+import { Spinner } from './component/Spinner';
+
+
+const testdata = {
+  accentFill: true,
+  hide: 0,
+  accentPosition: 'bottom',
+  label: "Tab1",
+  uniqueId: '234234234',
+  isActive: true,
+}
+
+const styles={
+  fontSize: '98px',
+}
 
 
 export class App extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {  };
+    this.state = {   startSpinner: true };
   }
 
-  componentWillMount() {
+  componentWillMount() { //CALLING ACTIONS
     this.props.fetchProductList();
     //this.props.fetchUserDetails();
   }
@@ -59,10 +75,25 @@ export class App extends React.Component {
 
   
   render() {
+    console.log('****************', this.props);
     return (
       <div>
-        <PizzaShoppieComponent/>
+        {this.props.startSpinner ? <Spinner/>:
+        <PizzaShoppieComponent {...testdata}/>}
         {/* <InputTextComponent/> */}
+        {/* <Tabs>
+        <Tab label="Tab1" className={styles}>
+          <h2>Tab Content One</h2>
+        </Tab>
+        <Tab label="Tab2">
+          <h2>Tab Content Two</h2>
+        </Tab>
+        <Tab label="Tab3">
+          <h2>Tab Content Three</h2>
+        </Tab>
+      </Tabs>
+
+      <Bar>Helo</Bar> */}
       </div>
     )
   }
@@ -70,7 +101,8 @@ export class App extends React.Component {
 
 export const mapStateToProps = state => ({
   userInfo: state.fetchUserDetailsReducer.data,
-  products: state.productListReducer.products
+  products: state.productListReducer.products,
+  startSpinner: state.spinnerReducer.startspinner
 });
 
 

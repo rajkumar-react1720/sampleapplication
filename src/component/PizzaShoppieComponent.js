@@ -24,11 +24,11 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-export function PizzaShoppieComponent() {
+export function PizzaShoppieComponent({...props}) {
   const openFood = useOpenFood();
   const orders = useOrders();
   useTitle({...openFood, ...orders})
-
+console.log('props', {...props})
     return (
         <>
             <GlobalStyle />

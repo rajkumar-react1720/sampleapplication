@@ -6,7 +6,8 @@ export function formatPrice(price){
 }
 const constants = {
     //fetchUserDetailsUri: 'http://localhost:7000/getDetails',
-    fetchUserDetailsUri: 'https://api.github.com/search/users?q=8989',
+    //fetchUserDetailsUri: 'https://api.github.com/search/users?q=8989',
+    fetchUserDetailsUri: 'http://localhost:7000/getUserDetails',
     fetchProductList: 'http://localhost:7000/getProductList',
 
     foodData: [
