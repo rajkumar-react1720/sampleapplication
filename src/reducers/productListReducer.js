@@ -1,7 +1,7 @@
 import actions from '../shared/actionTypes';
 
 const defaultState = {
-    products: []
+    products: null
 }
 
 const productListReducer = (state = defaultState, action) => {

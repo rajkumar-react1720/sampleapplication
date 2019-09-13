@@ -6,9 +6,9 @@ import constant from '../shared/constants';
 
 export default function* fetchProdcutListSaga() {
     try {
-        yield put({ type: actions.SHOW_APP_LOADER, response: true })
+       // yield put({ type: actions.SHOW_APP_LOADER, response: true })
         const url = constant.fetchProductList;
-        yield delay(10000)
+        //yield delay(10000)
         const response = yield call(callAxios, url, {}, 'GET');
         console.log('Hello products', response.data)
 

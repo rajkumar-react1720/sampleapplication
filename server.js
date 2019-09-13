@@ -64,6 +64,7 @@ const response = [
 ];
 
 const UserResponse = {
+    "statusCode": 200,
     "total_count": 62,
     "incomplete_results": false,
     "items": [
